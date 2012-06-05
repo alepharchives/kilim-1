@@ -1,4 +1,4 @@
-export CLASSPATH=./classes:./testclasses:./libs/asm-debug-all-4.0_RC2.jar:./libs/junit.jar:$CLASSPATH
+export CLASSPATH=./classes:./testclasses:./libs/asm-debug-all-4.0.jar:./libs/junit.jar:$CLASSPATH
 
 echo making dir:  ./classes
 rm -rf ./classes
@@ -18,5 +18,3 @@ echo Weaving =========================================================
 # negative tests for the Weaver.
 java -ea kilim.tools.Weaver -v -t -d ./classes -x "ExInvalid|test" ./classes
 java -ea kilim.tools.Weaver -v -t -d ./testclasses -x "ExInvalid" ./classes
-
-
